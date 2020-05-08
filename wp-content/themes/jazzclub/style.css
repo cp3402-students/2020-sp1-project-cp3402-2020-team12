@@ -622,7 +622,9 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	display: block;
-	width: 100%;
+	margin: 0 auto;
+	width: 50%;
+	top: -3em;
 }
 
 .main-navigation ul {
@@ -639,11 +641,11 @@ a:active {
 	top: 100%;
 	left: -999em;
 	z-index: 99999;
+	flex-direction: column;
 }
 
 .main-navigation ul ul ul {
 	left: -999em;
-	top: 0;
 }
 
 .main-navigation ul ul li:hover > ul,
@@ -653,7 +655,6 @@ a:active {
 }
 
 .main-navigation ul ul a {
-	width: 200px;
 }
 
 .main-navigation ul li:hover > ul,
@@ -663,11 +664,23 @@ a:active {
 
 .main-navigation li {
 	position: relative;
+	background-color: #f1f1f1;
+	
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	width: 160px;
+	text-align: center
+}
+
+.main-navigation a:hover {
+	background-color: grey;
+}
+
+.main-navigation a:active {
+	background-color: #f1f1f1;
 }
 
 /* Small menu. */
@@ -872,6 +885,7 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
+	margin-left: 15em;
 }
 
 /*--------------------------------------------------------------
