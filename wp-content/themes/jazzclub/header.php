@@ -28,6 +28,16 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
+			function getRandImage() {
+				return (string) rand(1,15);
+			}
+			$HeaderImageStart = "wp-content/uploads/2020/05/h";
+			$HeaderImageSelection = getRandImage();
+			$HeaderImageEnd = ".jpg";
+			$HeaderImageString = "".$HeaderImageStart.$HeaderImageSelection.$HeaderImageEnd;
+			?>
+			<!--<img class="custom-header-image" src="<?php echo $HeaderImageString;?>">-->
+			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>

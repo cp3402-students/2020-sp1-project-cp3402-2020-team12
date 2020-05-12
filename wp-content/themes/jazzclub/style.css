@@ -595,11 +595,12 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #4169e1;
+	/*color: #4169e1;*/
+	color: black;
 }
 
 a:visited {
-	color: #800080;
+	/*color: #800080;*/
 }
 
 a:hover,
@@ -622,9 +623,12 @@ a:active {
 --------------------------------------------------------------*/
 .main-navigation {
 	display: block;
-	margin: 0 auto;
-	width: 50%;
-	top: -3em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 54%;
+	font-size: large;
+	background-color: #FEDF01;
+	border-radius: 50px;
 }
 
 .main-navigation ul {
@@ -642,6 +646,8 @@ a:active {
 	left: -999em;
 	z-index: 99999;
 	flex-direction: column;
+	font-size: small;
+	background-color: #FEDF01;
 }
 
 .main-navigation ul ul ul {
@@ -664,8 +670,7 @@ a:active {
 
 .main-navigation li {
 	position: relative;
-	background-color: #f1f1f1;
-	
+	/*background-color: #f1f1f1;*/
 }
 
 .main-navigation a {
@@ -677,15 +682,24 @@ a:active {
 
 .main-navigation a:hover {
 	background-color: grey;
+	border-radius: 50px;
 }
 
+.main-navigation ul ul a:hover {
+	background-color: grey;
+	border-radius: 0;
+}
+
+
 .main-navigation a:active {
-	background-color: #f1f1f1;
+	/*background-color: #f1f1f1;*/
+
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
+	margin-top: 1%;
 	display: block;
 }
 
@@ -819,7 +833,7 @@ a:active {
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0 0 0;
 }
 
 .updated:not(.published) {
@@ -885,7 +899,7 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: inline-block;
-	margin-left: 15em;
+	margin-left: 8em;
 }
 
 /*--------------------------------------------------------------
@@ -961,15 +975,50 @@ object {
 }
 
 /*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.site-branding {
+	align-content: center;
+}
+
+.custom-header-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	height: 141px;
+}
+
+.custom-logo-link {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+
+/*--------------------------------------------------------------
+## Main
+--------------------------------------------------------------*/
+.site-main {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
 .site-footer
 {
 	background-color:#26272b;
 	padding:20px 20px;
-	font-size:15px;
-	line-height:24px;
+	font-size:12px;
+	line-height:4px;
 	color:#737373;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+
 }
 .site-footer hr
 {
@@ -985,7 +1034,7 @@ object {
 .site-footer h6
 {
 	color:#fff;
-	font-size:16px;
+	font-size:12px;
 	text-transform:uppercase;
 	margin-top:5px;
 	letter-spacing:2px

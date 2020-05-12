@@ -19,7 +19,7 @@
                 <h6>Townsville Jazz Club</h6>
                 <p>Address: 247 Flinders St Townsville QLD 4810 </p>
                 <p>Phone: 4772 1073 </p>
-                <div class="container">
+				<div class="container">
                 <div class="row">
                     <div class="col-md-8 col-sm-6 col-xs-12">
                         <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
@@ -38,6 +38,9 @@
                     </div>
                 </div>
             </div>
+			</div>
+		</div>
+	</div>
 </footer>
 
 
