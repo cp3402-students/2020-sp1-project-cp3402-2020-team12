@@ -51,6 +51,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /* Document
 	 ========================================================================== */
 
+	@import url(https://fonts.googleapis.com/css?family=Oleo+Script&display=swap);
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -451,8 +453,55 @@ html {
 	box-sizing: border-box;
 }
 
+.entry-title {
+	margin-bottom: 0;
+}
+
 body {
 	background: #fff;
+	font-family: Optima, sans-serif;
+}
+
+body h1, h2, h3, h4, h5, h6, .menu-main-menu-container {
+	font-family: 'Oleo Script', serif;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+.entry-content {
+	font-size: 22px;
+}
+
+.wp-block-button__link {
+	border-radius: 50px;
+	background-color: #f7ca08;
+	border-width: 0.5px;
+	border:solid;
+	border-color:#fff;
+
+	color: #32373c;
+	font-size: 28px;
+	font-family: 'Oleo Script', serif;
+}
+
+.wp-block-button__link:hover{
+	border-color: #32373c;
+	background-color: #32373c;
+	color: #f7ca08;
+}
+
+body a:hover {
+	color: #f7ca08;
 }
 
 hr {
@@ -499,8 +548,13 @@ figure {
 }
 
 table {
+	display: inline-block;
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+td {
+	padding-right: 50px;
 }
 
 /*--------------------------------------------------------------
@@ -596,7 +650,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	/*color: #4169e1;*/
-	color: black;
+	color: #32373c;
 }
 
 a:visited {
@@ -622,13 +676,22 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 54%;
-	font-size: large;
-	background-color: #FEDF01;
+	align-content:center;
+	text-align: center;
+	margin-top: -0.40em;
+}
+
+.menu-main-menu-container {
+	color: #32373c;
+	display: inline-block;
+	margin: 0 auto;
+	font-size: x-large;
+	background-color: #f7ca08;
 	border-radius: 50px;
+}
+
+.sub-menu a{
+	font-size: 18px;
 }
 
 .main-navigation ul {
@@ -646,8 +709,7 @@ a:active {
 	left: -999em;
 	z-index: 99999;
 	flex-direction: column;
-	font-size: small;
-	background-color: #FEDF01;
+	background-color: #f7ca08;
 }
 
 .main-navigation ul ul ul {
@@ -681,12 +743,14 @@ a:active {
 }
 
 .main-navigation a:hover {
-	background-color: grey;
+	color: #f7ca08;
+	background-color: #32373c;
 	border-radius: 50px;
 }
 
 .main-navigation ul ul a:hover {
-	background-color: grey;
+	color: #f7ca08;
+	background-color: #32373c;
 	border-radius: 0;
 }
 
@@ -842,8 +906,15 @@ a:active {
 
 .page-content,
 .entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
+.entry-summary,
+.entry-footer{
+	margin-bottom: 3.5em;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.entry-header {
+	text-align: center;
 }
 
 .page-links {
@@ -900,6 +971,7 @@ object {
 .custom-logo-link {
 	display: inline-block;
 	margin-left: 8em;
+	margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -977,14 +1049,15 @@ object {
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
+.site-header {
+	align-content: center;
+}
 .site-branding {
 	align-content: center;
 }
 
 .custom-header-image {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	width: 40%;
 	height: 141px;
 }
@@ -1000,8 +1073,8 @@ object {
 ## Main
 --------------------------------------------------------------*/
 .site-main {
-	margin-left: 10%;
-	margin-right: 10%;
+	display:flex;
+	flex-direction:column;
 }
 
 /*--------------------------------------------------------------
@@ -1011,6 +1084,7 @@ object {
 {
 	background-color:#26272b;
 	padding:20px 20px;
+	flex-shrink:0;
 	font-size:12px;
 	line-height:4px;
 	color:#737373;
@@ -1045,7 +1119,7 @@ object {
 }
 .site-footer a:hover
 {
-	color:#3366cc;
+	color:#f7ca08;
 	text-decoration:none;
 }
 
@@ -1119,7 +1193,7 @@ object {
 	-o-transition:all .2s linear;
 	transition:all .2s linear
 }
-.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+.social-icons a:active a:hover
 {
 	color:#fff;
 	background-color:#29aafe
@@ -1133,19 +1207,15 @@ object {
 }
 .social-icons a.facebook:hover
 {
-	background-color:#3b5998
+  background-color:#3b5998
 }
-.social-icons a.twitter:hover
+.social-icons a.phone:hover
 {
-	background-color:#00aced
+  background-color:#00aced
 }
-.social-icons a.linkedin:hover
+.social-icons a.address:hover
 {
-	background-color:#007bb6
-}
-.social-icons a.dribbble:hover
-{
-	background-color:#ea4c89
+  background-color:#007bb6
 }
 @media (max-width:767px)
 {
