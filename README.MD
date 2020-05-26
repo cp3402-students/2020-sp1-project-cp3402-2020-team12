@@ -32,7 +32,7 @@ Based on [Underscores](https://underscores.me/)
 5. Save local wp-content folder
 5. Download Lightsail Instance SSH Key
 6. Connect via FTP to Live site using SSH Key
-7. Overwrite Lvie wp-content folder with local wp-content folder
+7. Overwrite Live wp-content folder with local wp-content folder
 
 ###### Update Site Content
 - All site content is directly created on staging site see Content Creation section.
