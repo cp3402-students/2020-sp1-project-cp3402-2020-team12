@@ -649,12 +649,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	/*color: #4169e1;*/
 	color: #32373c;
 }
 
 a:visited {
-	/*color: #800080;*/
+	
 }
 
 a:hover,
@@ -678,10 +677,9 @@ a:active {
 .main-navigation {
 	align-content:center;
 	text-align: center;
-	margin-top: -0.40em;
 }
 
-.menu-main-menu-container {
+.main-navigation .menu-main-menu-container {
 	color: #32373c;
 	display: inline-block;
 	margin: 0 auto;
@@ -690,7 +688,7 @@ a:active {
 	border-radius: 50px;
 }
 
-.sub-menu a{
+.main-navigation .sub-menu a{
 	font-size: 18px;
 }
 
@@ -719,7 +717,8 @@ a:active {
 .main-navigation ul ul li:hover > ul,
 .main-navigation ul ul li.focus > ul {
 	display: block;
-	left: auto;
+	top: 0;
+	left: 100%;
 }
 
 .main-navigation ul ul a {
@@ -732,7 +731,6 @@ a:active {
 
 .main-navigation li {
 	position: relative;
-	/*background-color: #f1f1f1;*/
 }
 
 .main-navigation a {
@@ -754,55 +752,150 @@ a:active {
 	border-radius: 0;
 }
 
-
-.main-navigation a:active {
-	/*background-color: #f1f1f1;*/
-
-}
-
-/* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	margin-top: 1%;
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+/* Large Menu */
+@media screen and (min-width: 768px) {
 
-	.menu-toggle {
+	.mobile-navigation {
 		display: none;
 	}
 
 	.main-navigation ul {
 		display: flex;
 	}
+
+	.site-main .comment-navigation,
+	.site-main
+	.posts-navigation,
+	.site-main
+	.post-navigation {
+		margin: 0 0 1.5em;
+	}
+
+	.comment-navigation .nav-links,
+	.posts-navigation .nav-links,
+	.post-navigation .nav-links {
+		display: flex;
+	}
+
+	.comment-navigation .nav-previous,
+	.posts-navigation .nav-previous,
+	.post-navigation .nav-previous {
+		flex: 1 0 50%;
+	}
+
+	.comment-navigation .nav-next,
+	.posts-navigation .nav-next,
+	.post-navigation .nav-next {
+		text-align: end;
+		flex: 1 0 50%;
+	}
 }
 
-.site-main .comment-navigation,
-.site-main
-.posts-navigation,
-.site-main
-.post-navigation {
-	margin: 0 0 1.5em;
+/* Medium Menu */
+@media screen and (max-width: 1024px) {
+	
+	.menu-main-menu-container {
+		font-size: large;
+	}
+	
+	.main-navigation a {
+		width: 120px;
+	}
 }
 
-.comment-navigation .nav-links,
-.posts-navigation .nav-links,
-.post-navigation .nav-links {
-	display: flex;
-}
+/* Small Menu */
+@media screen and (max-width: 767px) {
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	flex: 1 0 50%;
-}
+	.main-navigation {
+		display: none;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+	
+	.mobile-navigation {
+		align-content:center;
+		text-align: center;
+	}
 
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	text-align: end;
-	flex: 1 0 50%;
+	.mobile-navigation .menu-mobile-menu-container {
+		color: #32373c;
+		display: inline-block;
+		margin: 0 auto;
+		font-size: large;
+		background-color: #f7ca08;
+		width: 100%;
+	}
+
+	.mobile-navigation .sub-menu a{
+		font-size: 18px;
+	}
+
+	.mobile-navigation ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+	}
+
+	/*.mobile-navigation ul ul {
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		float: left;
+		position: absolute;
+		top: 100%;
+		left: -999em;
+		z-index: 99999;
+		flex-direction: column;
+		background-color: #f7ca08;
+	}
+
+	.mobile-navigation ul ul ul {
+		left: -999em;
+	}
+
+	.mobile-navigation ul ul li:hover > ul,
+	.mobile-navigation ul ul li.focus > ul {
+		display: block;
+		top: 0;
+		left: 100%;
+	}
+
+	.mobile-navigation ul ul a {
+	}
+
+	.mobile-navigation ul li:hover > ul,
+	.mobile-navigation ul li.focus > ul {
+		left: auto;
+	}*/
+
+	.mobile-navigation li {
+		position: relative;
+		width: 100%
+	}
+
+	.mobile-navigation a {
+		display: block;
+		text-decoration: none;
+		width: 100%;
+		text-align: center
+	}
+
+	.mobile-navigation a:hover {
+		color: #f7ca08;
+		background-color: #32373c;
+		border-radius: 50px;
+	}
+
+	.mobile-navigation ul ul a:hover {
+		color: #f7ca08;
+		background-color: #32373c;
+		border-radius: 0;
+	}
+
 }
 
 /*--------------------------------------------------------------
@@ -969,9 +1062,23 @@ object {
 
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
-	display: inline-block;
-	margin-left: 8em;
-	margin-bottom: 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+
+.custom-header-image {
+	display: block;
+	width: 40%;
+	min-height: 141px;
+}
+
+/* Mobile Styling. */
+@media screen and (max-width: 768px) {
+.custom-logo-link {
+	display: none;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1054,27 +1161,16 @@ object {
 }
 .site-branding {
 	align-content: center;
-}
-
-.custom-header-image {
-	display: block;
-	width: 40%;
-	height: 141px;
-}
-
-.custom-logo-link {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 40%;
+	max-height: 3%;
 }
 
 /*--------------------------------------------------------------
 ## Main
 --------------------------------------------------------------*/
 .site-main {
-	display:flex;
-	flex-direction:column;
+  min-height: 100vh
+  display: flex;
+  flex-direction: column;
 }
 
 /*--------------------------------------------------------------
@@ -1084,126 +1180,119 @@ object {
 {
 	background-color:#26272b;
 	padding:20px 20px;
-	flex-shrink:0;
-	font-size:12px;
-	line-height:4px;
+	font-size:13px;
+	flex-shrink:0px;
+	line-height: 5px;
 	color:#737373;
     position: relative;
     bottom: 0;
     left: 0;
     right: 0; 
+	width:100%
 
 }
 .site-footer hr
 {
-	border-top-color:#bbb;
-	opacity:0.5
-	margin:0px
+  border-top-color:#bbb;
+  opacity:0.5
 }
-
 .site-footer hr.small
 {
-	margin:0px
+  margin:20px 0
 }
 .site-footer h6
 {
-	color:#fff;
-	font-size:12px;
-	text-transform:uppercase;
-	margin-top:5px;
-	letter-spacing:2px
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
 }
 .site-footer a
 {
-	color:#737373;
+  color:#737373;
 }
-.site-footer a:hover
-{
-	color:#f7ca08;
-	text-decoration:none;
-}
-
 .site-footer .social-icons
 {
-	text-align:right
+  text-align:right
 }
 .site-footer .social-icons a
 {
-	width:40px;
-	height:40px;
-	line-height:40px;
-	margin-left:6px;
-	margin-right:0;
-	border-radius:100%;
-	background-color:#33353d
+  width:30px;
+  height:30px;
+  line-height:30px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
 }
 .copyright-text
 {
-	float: left;
+  margin:0
 }
 @media (max-width:991px)
 {
-	.site-footer [class^=col-]
-	{
-		margin-bottom:30px
-	}
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
 }
 @media (max-width:767px)
 {
-	.site-footer
-	{
-		padding-bottom:0
-	}
-	.site-footer .copyright-text,.site-footer .social-icons
-	{
-		text-align:center
-	}
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
 }
 .social-icons
 {
-	padding-left:0;
-	margin-bottom:0;
-	list-style:none
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
 }
 .social-icons li
 {
-	display:inline-block;
-	margin-bottom:4px
+  display:inline-block;
+  margin-bottom:4px
 }
 .social-icons li.title
 {
-	margin-right:15px;
-	text-transform:uppercase;
-	color:#96a2b2;
-	font-weight:700;
-	font-size:13px
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
 }
 .social-icons a{
-	background-color:#eceeef;
-	color:#818a91;
-	font-size:16px;
-	display:inline-block;
-	line-height:44px;
-	width:44px;
-	height:44px;
-	text-align:center;
-	margin-right:8px;
-	border-radius:100%;
-	-webkit-transition:all .2s linear;
-	-o-transition:all .2s linear;
-	transition:all .2s linear
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:30px;
+  width:30px;
+  height:30px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
 }
-.social-icons a:active a:hover
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
 {
-	color:#fff;
-	background-color:#29aafe
+  color:#fff;
+  background-color:#29aafe
 }
 .social-icons.size-sm a
 {
-	line-height:34px;
-	height:34px;
-	width:34px;
-	font-size:14px
+  line-height:30px;
+  height:30px;
+  width:34px;
+  font-size:14px
 }
 .social-icons a.facebook:hover
 {
@@ -1219,10 +1308,10 @@ object {
 }
 @media (max-width:767px)
 {
-	.social-icons li.title
-	{
-		display:block;
-		margin-right:0;
-		font-weight:600
-	}
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
 }

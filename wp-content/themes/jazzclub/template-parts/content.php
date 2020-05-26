@@ -22,8 +22,8 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				jazzclub_posted_on();
-				jazzclub_posted_by();
+				//jazzclub_posted_on();
+				//jazzclub_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -58,6 +58,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php jazzclub_entry_footer(); ?>
+		<?php //jazzclub_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
