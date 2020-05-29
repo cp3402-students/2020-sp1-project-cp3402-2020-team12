@@ -34,9 +34,9 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
                         <ul class="social-icons">
-                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a class="Phone" href="#"><i class="fa fa-phone"></i></a></li>
-                            <li><a class="address" href="#"><i class="fa fa-map-marker"></i></a></li>
+                            <li><a class="facebook" href="https://www.facebook.com/townsvillejazzclub"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="Phone" href="contact-us/"><i class="fa fa-phone"></i></a></li>
+                            <li><a class="address" href="contact-us/"><i class="fa fa-map-marker"></i></a></li>
                         </ul>
                     </div>
                 </div>
