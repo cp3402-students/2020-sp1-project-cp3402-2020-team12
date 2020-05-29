@@ -25,7 +25,7 @@ Based on [Underscores](https://underscores.me/)
 6. Overwrite theme folder with updated files
 
 ###### Push Staging to Live
-1. On Staging site export only database and media files via All-in-One WP Migration Plugin
+1. On Staging site export only database, plugin and media files via All-in-One WP Migration Plugin
 2. On Live site import prior export file via All-in-One WP Migration Plugin
 3. On Staging site export all content to file via All-in-One WP Migration Plugin
 4. On local wordpress instance import prior export file via All-in-One WP Migration Plugin
