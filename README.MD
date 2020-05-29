@@ -55,5 +55,17 @@ Event post will automatically be displayed on Events Page in reverse chronologic
 4. Add New Page to Main Menu via Appeareance -> Menus
 
 ###### Gallery Image
-//TODO
+1. Add New Page
+2. Add Image Block 
+3. Upload Image to Image Block 
+
+###### Gallery Plugin 
+1. Navigate to Photo Gallery Plugin within Admin Pannel
+2. Select Add New Gallery 
+3. Name Gallery 
+4. Add Images to Gallery 
+5. Add Photo Gallery WordPress Block to Page
+6. Select The New Gallery and Slideshow Gallery Type
+7. Select Update
+
 <br/>
