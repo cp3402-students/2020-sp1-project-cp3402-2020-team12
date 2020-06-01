@@ -25,14 +25,9 @@ Based on [Underscores](https://underscores.me/)
 6. Overwrite theme folder with updated files
 
 ###### Push Staging to Live
-1. On Staging site export only database, plugin and media files via All-in-One WP Migration Plugin
+1. Install All-in-One WP Migration Plugin on both Staging and Live sites
+1. On Staging site export site via All-in-One WP Migration Plugin with default settings
 2. On Live site import prior export file via All-in-One WP Migration Plugin
-3. On Staging site export all content to file via All-in-One WP Migration Plugin
-4. On local wordpress instance import prior export file via All-in-One WP Migration Plugin
-5. Save local wp-content folder
-5. Download Lightsail Instance SSH Key
-6. Connect via FTP to Live site using SSH Key
-7. Overwrite Live wp-content folder with local wp-content folder
 
 ###### Update Site Content
 - All site content is directly created on staging site see Content Creation section.
