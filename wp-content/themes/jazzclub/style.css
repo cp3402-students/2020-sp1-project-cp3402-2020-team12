@@ -449,12 +449,17 @@ big {
 	box-sizing: inherit;
 }
 
+figcaption {
+	text-align: center;
+}
+
 html {
 	box-sizing: border-box;
 }
 
 .entry-title {
 	margin-bottom: 0;
+	text-decoration: none;
 }
 
 body {
@@ -480,6 +485,7 @@ h3 {
 
 .entry-content {
 	font-size: 22px;
+	min-height: 80%;
 }
 
 .wp-block-button__link {
@@ -500,9 +506,22 @@ h3 {
 	color: #f7ca08;
 }
 
-body a:hover {
+p a, td a, .entry-title a, figcaption a, .wp-block-button__link {
+	text-shadow: 1px 1px 4px #32373c, 1px 1px 2px #32373c, 1px 1px 3px #32373c;
 	color: #f7ca08;
 }
+
+p a:hover, td a:hover, .entry-title a:hover, figcaption a:hover {
+	color: #32373c;
+	text-shadow: none;
+	text-shadow: 1px 1px 3px #32373c;
+}
+
+.site-title a:hover {
+		color: #32373c;
+}
+
+
 
 hr {
 	background-color: #ccc;
@@ -549,12 +568,25 @@ figure {
 
 table {
 	display: inline-block;
-	margin: 0 0 1.5em;
+	margin: 0;
 	width: 100%;
 }
 
+.wp-block-table {
+	margin: 0;
+}
+
+.wp-block-table h3 a{
+	text-decoration: none;
+}
+
+.wp-block-table h3{
+	margin: 0;
+}
+
 td {
-	padding-right: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /*--------------------------------------------------------------
@@ -684,7 +716,7 @@ a:active {
 	display: inline-block;
 	margin: 0 auto;
 	font-size: x-large;
-	background-color: #d20117;
+	background-color: #f7ca08;
 	border-radius: 50px;
 }
 
@@ -769,9 +801,9 @@ a:active {
 	}
 
 	.site-main .comment-navigation,
-	.site-main,
+	.site-main
 	.posts-navigation,
-	.site-main,
+	.site-main
 	.post-navigation {
 		margin: 0 0 1.5em;
 	}
@@ -1063,22 +1095,41 @@ object {
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 40%;
+	float: right;
 }
 
 .custom-header-image {
 	display: block;
-	width: 40%;
-	min-height: 141px;
 }
 
 /* Mobile Styling. */
 @media screen and (max-width: 768px) {
-.custom-logo-link {
-	display: none;
+	.custom-logo-link {
+		display: none;
 	}
+
+	.entry-content {
+		margin-left: 20px;
+		margin-right: 20px;
+		align-content: center;
+		text-align: center;
+	}
+	
+	td {
+		padding-bottom: 10px;
+		font-size: 20px;
+		border: solid;
+		border-width: 1px;
+	}
+	
+	ul {
+		margin: 0px;
+	}
+	
+	.wp-block-group__inner-container td {
+		border: none;
+	}
+	
 }
 
 /*--------------------------------------------------------------
@@ -1164,13 +1215,81 @@ object {
 	max-height: 3%;
 }
 
+.site-title {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	margin-bottom: 40px;
+	text-align: left;
+	font-family: 'Oleo Script', serif;
+	font-size: 50px;
+}
+
+.header-row {
+	margin-left 10%;
+	margin-right: 10%;
+}
+
+.header-row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.header-column-25 {
+	float: left;
+	width: 45%;
+	padding: 1px;
+}
+
+.header-column-75 {
+	float: left;
+	width: 55%;
+	padding: 1px;
+}
+
+@media screen and (max-width: 768px) {
+	.site-title {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 30px;
+		margin-bottom: 40px;
+		text-align: center;
+		font-family: 'Oleo Script', serif;
+		font-size: 30px;
+	}
+
+	.header-row {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.header-row::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	.header-column-25 {
+		float: left;
+		width: 0%;
+		padding: 1px;
+	}
+
+	.header-column-75 {
+		float: left;
+		width: 100%;
+		padding: 1px;
+	}
+}
 /*--------------------------------------------------------------
 ## Main
 --------------------------------------------------------------*/
 .site-main {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 550px;
 }
 
 /*--------------------------------------------------------------
@@ -1195,6 +1314,7 @@ object {
 {
   border-top-color:#bbb;
   opacity:0.5
+  margin:0px
 }
 .site-footer hr.small
 {
@@ -1228,13 +1348,13 @@ object {
 }
 .copyright-text
 {
-  margin:0
+  padding: bottom
 }
 @media (max-width:991px)
 {
   .site-footer [class^=col-]
   {
-    margin-bottom:30px
+    margin-bottom:0px
   }
 }
 @media (max-width:767px)
@@ -1272,9 +1392,9 @@ object {
   color:#818a91;
   font-size:16px;
   display:inline-block;
-  line-height:30px;
-  width:30px;
-  height:30px;
+  line-height:20px;
+  width:20px;
+  height:20px;
   text-align:center;
   margin-right:8px;
   border-radius:100%;
@@ -1291,7 +1411,7 @@ object {
 {
   line-height:30px;
   height:30px;
-  width:34px;
+  width:30px;
   font-size:14px
 }
 .social-icons a.facebook:hover
