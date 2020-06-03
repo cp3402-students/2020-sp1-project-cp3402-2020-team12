@@ -20,9 +20,10 @@ Based on [Underscores](https://underscores.me/)
 1. Push theme changes to github branch
 2. Merge theme changes to master
 3. Rebase local github branch to master
-4. Download Lightsail Instance SSH Key
-5. Connect via FTP to Staging site using SSH Key
-6. Overwrite theme folder with updated files
+4. Pull theme from master
+5. Download Lightsail Instance SSH Key
+6. Connect via FTP to Staging site using SSH Key
+7. Overwrite Staging site theme folder with updated theme
 
 ###### Push Staging to Live
 1. Install All-in-One WP Migration Plugin on both Staging and Live sites
