@@ -16,14 +16,15 @@ Based on [Underscores](https://underscores.me/)
 1. On Staging site export all content to file via All-in-One WP Migration Plugin
 2. On local wordpress instance import prior export file via All-in-One WP Migration Plugin
 
-###### Update Staging Site Theme
+###### Update Github Theme
 1. Push theme changes to github branch
 2. Merge theme changes to master
-3. Rebase local github branch to master
-4. Pull theme from master
-5. Download Lightsail Instance SSH Key
-6. Connect via FTP to Staging site using SSH Key
-7. Overwrite Staging site theme folder with updated theme
+
+###### Update Staging Site Theme
+1. Pull theme from master
+2. Download Lightsail Instance SSH Key
+3. Connect via FTP to Staging site using SSH Key
+4. Overwrite Staging site theme folder with updated theme
 
 ###### Push Staging to Live
 1. Install All-in-One WP Migration Plugin on both Staging and Live sites
