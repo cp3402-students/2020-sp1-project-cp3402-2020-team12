@@ -684,7 +684,7 @@ a:active {
 	display: inline-block;
 	margin: 0 auto;
 	font-size: x-large;
-	background-color: #f7ca08;
+	background-color: #d20117;
 	border-radius: 50px;
 }
 
@@ -769,9 +769,9 @@ a:active {
 	}
 
 	.site-main .comment-navigation,
-	.site-main
+	.site-main,
 	.posts-navigation,
-	.site-main
+	.site-main,
 	.post-navigation {
 		margin: 0 0 1.5em;
 	}
@@ -1168,7 +1168,7 @@ object {
 ## Main
 --------------------------------------------------------------*/
 .site-main {
-  min-height: 100vh
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
